@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "fcc1a02f-f4b9-4800-b81a-82fe92a34956",
+		"name": "spring-boot-aop-annotation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "fetch all products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/spring-boot-aop-annotation/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"spring-boot-aop-annotation",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add list of products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": \"20001\",\n        \"name\": \"Book 20001\",\n        \"price\": 100.99\n    },\n        {\n        \"id\": \"20002\",\n        \"name\": \"Book 20002\",\n        \"price\": 200.99\n    },\n        {\n        \"id\": \"20003\",\n        \"name\": \"Book 20003\",\n        \"price\": 300.99\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/spring-boot-aop-annotation/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"spring-boot-aop-annotation",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "throw error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/spring-boot-aop-annotation/error",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"spring-boot-aop-annotation",
+						"error"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
